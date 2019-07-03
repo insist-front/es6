@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		function sum(...numbers){
+			let sum = 0;
+			numbers.map(item => {
+				sum += item
+			})
+			return sum;
+		}
+		console.log(sum(1,2,3,4,5))
+		
+		console.log('-----------可变参----------')
+		let arr = [1,2,3,4]
+		const [first,...others] = arr;
+		console.log(first,others)
+		
+	</script>
+</html>

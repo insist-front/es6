@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		let persons = [
+			{'name':'zhangsan','age':8,'sex':'nan'},
+			{'name':'lisi','age':12,'sex':'nv'},
+			{'name':'wangwu','age':20,'sex':'nan'}
+		]
+		
+		console.log('----------find：遍历数组中的每个对象，判断条件true返回元素对象----------------')
+		
+		// element:每个元素 idnex:下标索引 arr:遍历的数组对象
+		let newPersons = persons.find((element,index,arr) => {
+			if(element.name === 'lisi') return true
+		})
+		console.log(newPersons)
+		//单独写一项代表数组中的每一项  
+		let newPerson = persons.find(item => item.name === 'wangwu');
+		console.log(newPerson)
+		
+		
+		console.log('----------findIndex：遍历数组中的每个对象，判断条件true返回元素对象的下标----------------')
+		
+		// element:每个元素 idnex:下标索引 arr:遍历的数组对象
+		let idnex = persons.findIndex((element,index,arr) => {
+			if(element.name === 'lisi') return true
+		})
+		console.log(idnex)
+		
+		//单独写一项代表数组中的每一项
+		let idnex2 = persons.findIndex(item => item.name === 'wangwu');
+		console.log(idnex2)
+		
+		console.log('-----------some()当其中一个满足需求就返回True---------------')
+		
+		let isThen15Age = persons.some(item => item.age > 15);
+		console.log(isThen15Age);
+		
+		console.log('-----------every()只要一个不满足就返回false并停止下面操作---------------')
+		
+		let isThen15Age2 = persons.every(item => item.age > 15);
+		console.log(isThen15Age2);
+	</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id='ul'>
+			<li>111</li>
+			<li>222</li>
+			<li>333</li>
+		</ul>
+	</body>
+	<script>
+		let noteList = document.querySelectorAll('li')
+		let names = Array.from(noteList);
+		let newNoteList = names.map(item => item.textContent);
+		console.log(newNoteList)
+		
+		console.log('------------------------------')
+		
+		let ages = 'abcdefg';
+		console.log(Array.from(ages))
+		
+		console.log('------------------------------')
+		
+		//定义长度为1的数组
+		let arr = new Array(1)
+		console.log('arr:',arr)
+		//定义数组为[1,2,3]
+		let arr2 = new Array(1,2,3)
+		console.log('arr2:',arr2)
+		//定义数组[1]
+		let arr3 = Array.of(1)
+		console.log('arr3:',arr3);
+		//定义数组[1,2,3]
+		let arr4 = Array.of(1,2,3);
+		console.log('arr4:',arr4);
+	</script>
+</html>
