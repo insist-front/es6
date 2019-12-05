@@ -19,5 +19,20 @@
 		const [c,...others] = number;
 		console.log(c);
 		console.log(others);
+		//++++++++++++
+		 //数组解构
+		    const namess = ['Henry','Bucky','Emily'];
+		    // 解构
+		    const [name1,name2,name3] = namess ;
+		    console.log(name1,name2,name3)//Henry Bucky Emily
+		//返回数组个数
+		  const {length} = namess;//如果接收的方式是数组方式,写多少个返回多少个,如果是对象的方式,会把数组里的个数返回来
+		    console.log(length)//3
+		    // 结合展开运算符
+		    const [name4,...set] = namess;
+		    console.log(name4)//Henry
+		    console.log(set)//[ 'Bucky', 'Emily' ]
+		    console.log(name4,set)//henry [ 'Bucky', 'Emily' ]
+		
 	</script>
 </html>
